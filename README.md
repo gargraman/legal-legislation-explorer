@@ -4,6 +4,15 @@ This repo is an example Neo4j use case designed to transform complex legislative
 
 By leveraging a recursive [crawler](crawler.ipynb) and a parallel [data loader](loader.ipynb), this implementation processes structured legislative documents adhering to the [CLML Schema](https://github.com/legislation/clml-schema). It bypasses traditional, cumbersome ETL pipelines, manual data cleansing, and unreliable PDF scraping. Instead, it directly parses XML content provided by The National Archives, transforming legal content - spanning parts, chapters, sections, schedules, and explanatory notes - into a ready-to-use graph representation in Neo4j. This allows for complex temporal queries and deep legislative analysis. The underlying loader currently utilizes [pyspark](https://spark.apache.org/docs/latest/api/python/index.html) to optimize the transformation of raw JSON data for Neo4j, though the architecture is adaptable to standard Python environments depending on infrastructure requirements.
 
+On top of the graph, [`app.py`](app.py) serves a Streamlit **GraphRAG agent** that answers legal questions over Neo4j using a layered set of retrieval tools (schema navigation, title resolution, hybrid title+vector search, contextual text retrieval, citation/supersedes traversal, semantic search, and a last-resort Text2Cypher expert).
+
+### Two ways to run the pipeline
+
+The pipeline exists in two parallel forms:
+
+- **Jupyter notebooks** — the original reference, and what produced the images in `renderings/`: `crawler.ipynb` → `loader.ipynb` → `vectorize.ipynb` → `indices.ipynb`, with `examples.ipynb` as a query/visualization gallery.
+- **Python package under [`src/`](src/README.md)** — importable, testable modules mirroring each notebook (`crawler.py`, `loader.py`, `vectorize.py`, `indices.py`, `queries.py`, plus a shared `config.py`), covered by a `pytest` suite in `src/tests/`. The `src/` crawler **intentionally diverges** from the notebook: it fetches CLML XML asynchronously via [crawl4ai](https://github.com/unclecode/crawl4ai) (HTTP-only strategy, with a synchronous `requests` fallback) rather than plain `requests`. See [`src/README.md`](src/README.md) for the module map, run order, test instructions, and the correctness fixes made during conversion.
+
 ## Target State and Objective
 
 Our primary objective is to cultivate a high-fidelity document knowledge graph, resulting in an optimal foundation for [GraphRAG](https://neo4j.com/blog/genai/what-is-graphrag/) (Graph Retrieval-Augmented Generation) applications specifically tailored for the legal and professional services sectors.

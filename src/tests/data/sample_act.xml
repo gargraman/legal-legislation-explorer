@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Legislation xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:dct="http://purl.org/dc/terms/"
+             xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+  <ukm:Metadata>
+    <dc:title>Corporation Tax Act 2010</dc:title>
+    <dc:description>An Act to restate corporation tax legislation.</dc:description>
+    <dc:publisher>Statute Law Database</dc:publisher>
+    <dc:modified>2024-01-01</dc:modified>
+    <dc:identifier>http://www.legislation.gov.uk/ukpga/2010/4</dc:identifier>
+    <dct:valid>2020-01-01</dct:valid>
+    <ukm:PrimaryMetadata>
+      <ukm:Year Value="2010"/>
+      <ukm:Number Value="4"/>
+      <ukm:EnactmentDate Date="2010-03-03"/>
+      <ukm:DocumentStatus Value="final"/>
+      <ukm:ISBN Value="9780105600107"/>
+      <ukm:DocumentCategory Value="primary"/>
+      <ukm:ComingIntoForce>
+        <ukm:DateTime Date="2010-04-01"/>
+      </ukm:ComingIntoForce>
+      <ukm:UnappliedEffect EffectId="E1" Type="inserted" AffectedProvisions="s. 1"
+                           AffectingProvisions="s. 2" RequiresApplied="true" Notes="a note"
+                           Modified="2023-01-01">
+        <ukm:AffectingTitle>Finance Act 2023</ukm:AffectingTitle>
+        <ukm:InForce Date="2023-04-01" Qualification="wholly"/>
+      </ukm:UnappliedEffect>
+    </ukm:PrimaryMetadata>
+    <ukm:Supersedes URI="http://www.legislation.gov.uk/id/ukpga/1988/1"/>
+    <ukm:SupersededBy URI="http://www.legislation.gov.uk/id/ukpga/2020/14"/>
+  </ukm:Metadata>
+  <Primary>
+    <Body>
+      <Part DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/part/1"
+            RestrictStartDate="2010-04-01" RestrictEndDate="2025-01-01" Status="final">
+        <Number>Part 1</Number>
+        <Title>Calculation of liability</Title>
+        <Chapter DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/part/1/chapter/1" Status="final">
+          <Number>Chapter 1</Number>
+          <Title>Currency</Title>
+          <P1group RestrictStartDate="2010-04-01" RestrictExtent="E+W" Status="final">
+            <Title>Period for which tax is charged</Title>
+            <P1 DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/section/1">
+              <Pnumber>1</Pnumber>
+              <P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/section/1/2"
+                  RestrictStartDate="2010-04-01" Status="final">
+                <Pnumber>2</Pnumber>
+                <Text>The tax is charged for financial years.</Text>
+                <CommentaryRef Ref="c1"/>
+              </P2>
+            </P1>
+          </P1group>
+        </Chapter>
+      </Part>
+    </Body>
+  </Primary>
+  <Schedules>
+    <Schedule DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/schedule/1">
+      <Number>Schedule 1</Number>
+      <Title>Minor and consequential amendments</Title>
+      <Reference>Section 1</Reference>
+      <Pblock>
+        <Title>Amendments</Title>
+        <P1 DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/schedule/1/paragraph/1">
+          <Pnumber>1</Pnumber>
+          <P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/schedule/1/paragraph/1/2">
+            <Pnumber>2</Pnumber>
+            <Text>A consequential amendment.</Text>
+          </P2>
+        </P1>
+      </Pblock>
+    </Schedule>
+  </Schedules>
+  <Commentaries>
+    <Commentary id="c1" Type="C">
+      <Para><Text>Commentary referencing the 1988 Act.</Text></Para>
+      <Citation id="cit1" URI="http://www.legislation.gov.uk/id/ukpga/1988/1"
+                Title="Income and Corporation Taxes Act 1988"
+                Class="UnitedKingdomPublicGeneralAct" Year="1988" Number="1">1988 c. 1</Citation>
+      <CitationSubRef id="sub1" URI="http://www.legislation.gov.uk/id/ukpga/1988/1/section/5"
+                      CitationRef="cit1" SectionRef="section-5">s. 5</CitationSubRef>
+    </Commentary>
+  </Commentaries>
+  <ExplanatoryNotes DocumentURI="http://www.legislation.gov.uk/ukpga/2010/4/notes">
+    <P>
+      <Text>These notes explain the Act and cite another Act.</Text>
+      <Citation id="encit1" URI="http://www.legislation.gov.uk/id/ukpga/2007/3"
+                Title="Income Tax Act 2007" Class="UnitedKingdomPublicGeneralAct"
+                Year="2007" Number="3">2007 c. 3</Citation>
+    </P>
+  </ExplanatoryNotes>
+</Legislation>

@@ -16,6 +16,8 @@ dependencies:
   - pytorch
   - pip
   - pip:
+    - crawl4ai>=0.9,<1
+    - requests
     - neo4j
     - pyspark==3.5.1
     - playwright

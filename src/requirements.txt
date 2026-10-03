@@ -1,0 +1,32 @@
+# Runtime dependencies for the converted pipeline modules (src/).
+# Pinning is left to the project's environment.yml; this file documents WHAT
+# each stage needs so the folder is self-contained.
+
+# --- crawler.py ---
+crawl4ai>=0.9,<1   # default fetcher (HTTP-only AsyncHTTPCrawlerStrategy; no browser binary needed). Pinned: strategy lives in crawl4ai.async_crawler_strategy on this line.
+beautifulsoup4
+lxml
+requests        # fallback fetcher, used when crawl4ai is unavailable or a session is injected.
+tqdm
+python-dotenv
+
+# --- loader.py ---  (heavy; install in the full conda env)
+pyspark==3.5.1
+neo4j
+
+# --- vectorize.py ---
+sentence-transformers
+torch
+langchain
+langchain-neo4j
+langchain-google-genai
+langchain-openai
+langchain-huggingface
+
+# --- queries.py ---
+neo4j-viz
+pandas
+playwright
+
+# --- tests ---
+pytest
